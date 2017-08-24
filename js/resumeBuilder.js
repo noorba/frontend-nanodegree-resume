@@ -27,7 +27,7 @@ var work ={
 });
 		
 	}
-}
+};
 var projects ={
 	"projects":[
 	{
@@ -54,10 +54,10 @@ var projects ={
           var formattedIl=HTMLprojectImage.replace("%data%", projects.images[i]);
          $(".project-entry").append(formattedIl);
  
-     }})
+     }});
 	
 	}
-}
+};
 
 var bio ={
 	"name":"noor ahmad",
@@ -99,16 +99,16 @@ var bio ={
 
 	    
 	
-        	var formatteMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
-        	$("#footerContacts").prepend(formatteMobile);
-        	var formatteEmail = HTMLemail.replace("%data%",bio.contacts.email);
-        	$("#footerContacts").prepend(formatteEmail);
-        	var formattedTwitter=HTMLtwitter.replace("%data%",bio.contacts.twitter);
-	       $("#footerContacts").prepend(formattedTwitter);
-        	var formattedGithun=HTMLgithub.replace("%data%",bio.contacts.github);
-        	$("#footerContacts").prepend(formattedGithun);
-        	var formattedlocation=HTMLlocation.replace("%data%",bio.contacts.location);
-        	$("#footerContacts").prepend(formattedlocation);
+        	var formattefoterMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+        	$("#footerContacts").prepend(formattefoterMobile);
+        	var formattefotterEmail = HTMLemail.replace("%data%",bio.contacts.email);
+        	$("#footerContacts").prepend(formattefotterEmail);
+        	var formattedfotterTwitter=HTMLtwitter.replace("%data%",bio.contacts.twitter);
+	       $("#footerContacts").prepend(formattedfotterTwitter);
+        	var formattedfotterGithun=HTMLgithub.replace("%data%",bio.contacts.github);
+        	$("#footerContacts").prepend(formattedfotterGithun);
+        	var formattedfottrtlocation=HTMLlocation.replace("%data%",bio.contacts.location);
+        	$("#footerContacts").prepend(formattedfottrtlocation);
 
             $("#header").append(HTMLskillsStart);	
           for (var i = 0;  bio.skills.length > i; ++i) {
@@ -122,7 +122,7 @@ var bio ={
              }
 
 	
-             }
+             };
 		
 
 var eduaction ={
@@ -145,7 +145,7 @@ var eduaction ={
 
      display: function(){
 
-      for (schol in eduaction.schools){
+      for (var schol in eduaction.schools){
          $("#education").append(HTMLschoolStart);  
          var formatteSchoolName = HTMLschoolName.replace("%data%",eduaction.schools[schol].name);
          $(".education-entry:last").append(formatteSchoolName);
@@ -175,7 +175,7 @@ var eduaction ={
 
       }
    
-       }
+       };
 
 
     /* function inName (name){
