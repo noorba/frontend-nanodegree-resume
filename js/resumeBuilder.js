@@ -60,7 +60,7 @@ var projects ={
 };
 
 var bio ={
-	"name":"noor ahmad",
+	"name":"Noor Ahmad",
 	"role":"student",
 	"contacts":{
 		"mobile":"0579888888",

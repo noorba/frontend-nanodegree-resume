@@ -11,7 +11,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .clear-fix {
@@ -130,6 +130,7 @@ a {
 	border-radius: 10%;
 }
 /* TODO: Replace with image later */
+
 #header {
   background-color: #421C52	;
   
@@ -138,6 +139,7 @@ a {
   background-color: #FFFFFF;
   
 }
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
