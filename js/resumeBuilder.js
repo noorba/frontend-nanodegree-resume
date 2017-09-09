@@ -1,54 +1,3 @@
-var work = {
-    "jobs": [{
-        "employer": "PNU",
-        "title": "Student",
-        "location": "Riyadh",
-        "dates": "inprogress",
-        "description": "gsfgrhyjttkudtkf"
-    }],
-    display: function() {
-        work.jobs.forEach(function(job) {
-            $("#workExperience").append(HTMLworkStart);
-
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-            var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
-            var formattedEmployerTitle = formattedEmployer + formattedTitle;
-            var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-            var formattedDescritopn = HTMLworkDescription.replace("%data%", job.description);
-            $(".work-entry:last").append(formattedEmployerTitle,formattedDates,formattedDescritopn);
-
-        });
-
-    }
-};
-var projects = {
-    "projects": [{
-        "title": "data entry",
-        "dates": "2/5/2017",
-        "description": "fvsbjgrijbhirjggvksegvkse",
-        "images": ["images/fry.jpg", "images/header.png"]
-    }],
-    display: function() {
-        $("#projects").append(HTMLprojectStart);
-        projects.projects.forEach(function(prog) {
-
-
-            var formattedTitle = HTMLprojectTitle.replace("%data%", prog.title);
-            var formatteDates = HTMLprojectDates.replace("%data%", prog.dates);
-            $(".project-entry:last").append(formattedTitle,formatteDates);
-
-            var formatteDescription = HTMLprojectDescription.replace("%data%", prog.description);
-            $(".project-entry:last").append(formatteDescription);
-            for (var i = 0; projects.images.length < i; i++) {
-                var formattedIl = HTMLprojectImage.replace("%data%", prog.images[i]);
-                $(".project-entry").append(formattedIl);
-
-            }
-        });
-
-    }
-};
-
 var bio = {
     "name": "Noor Ahmad",
     "role": "student",
@@ -103,10 +52,65 @@ var bio = {
 };
 
 
+
+var work = {
+    "jobs": [{
+        "employer": "PNU",
+        "title": "Student",
+        "location": "Riyadh",
+        "dates": "inprogress",
+        "description": "gsfgrhyjttkudtkf"
+    }],
+    display: function() {
+        work.jobs.forEach(function(job) {
+            $("#workExperience").append(HTMLworkStart);
+
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+            var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+            var formattedEmployerTitle = formattedEmployer + formattedTitle;
+            var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+            var formattedDescritopn = HTMLworkDescription.replace("%data%", job.description);
+            $(".work-entry:last").append(formattedEmployerTitle,formattedDates,formattedDescritopn);
+
+        });
+
+    }
+};
+var projects = {
+    "projects": [{
+        "title": "data entry",
+        "dates": "2/5/2017",
+        "description": "fvsbjgrijbhirjggvksegvkse",
+        "images": ["images/data1.jpg", "images/data2.jpg"]
+    }],
+    display: function() {
+        $("#projects").append(HTMLprojectStart);
+        projects.projects.forEach(function(prog) {
+
+
+            var formattedTitle = HTMLprojectTitle.replace("%data%", prog.title);
+            var formatteDates = HTMLprojectDates.replace("%data%", prog.dates);
+            $(".project-entry:last").append(formattedTitle,formatteDates);
+
+            var formatteDescription = HTMLprojectDescription.replace("%data%", prog.description);
+            $(".project-entry:last").append(formatteDescription);
+            for (var i = 0; i< prog.images.length ; i++) {
+                var formattedIl = HTMLprojectImage.replace("%data%", prog.images[i]);
+                $(".project-entry:last").append(formattedIl);
+
+            }
+        });
+
+    }
+};
+
+
+
+
 var education = {
     "schools": [{
         "name": "PNU",
-        "location": "Riyadh",
+        "location": "Riyadh,Ministry of Labor and Social Development",
         "degree": "BA",
         "majors": ["IS", "cyber"],
         "dates": "2017",
@@ -148,22 +152,10 @@ var education = {
 };
 
 
-/* function inName (name){
-		 name.trim().split("");
-		 console.log(name);
-		 name[1]=name[1].toUpperCase;
-		 name[0]=name[0].slice(0,1).toUpperCase+name[0].slice(1).toLowerCase;
-		 
-		 return  name[0]+""+name[1];
-		  }
-		  
-	 $("#main").append(internationalizeButton);*/
 
 
-
-
-work.display();
-education.display();
 bio.display();
+work.display();
 projects.display();
+education.display();
 $("#mapDiv").append(googleMap);
